@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import sys
 
-csv = pd.read_csv('data/weather_data.csv', usecols=['Location', 'Date_Time', 'Temperature_C'])
+csv = pd.read_csv('data/sample_weather_data.csv', usecols=['Location', 'Date_Time', 'Temperature_C'])
 
 # filtering cities: San Diego, New York, San Jose, Philadelphia
 condition_SD = csv['Location'] == 'San Diego'
@@ -61,4 +61,5 @@ else :
 
 fig.tight_layout()
 fig.subplots_adjust(hspace=0.35, wspace=0.25)
+
 plt.show()
