@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
 
-csv_file = pd.read_csv('data/weather_data.csv', usecols=['Location', 'Temperature_C', 'Humidity_pct', 'Precipitation_mm', 'Wind_Speed_kmh'], nrows=100)
+csv_file = pd.read_csv('data/sample_weather_data.csv', usecols=['Location', 'Temperature_C', 'Humidity_pct', 'Precipitation_mm', 'Wind_Speed_kmh'], nrows=100)
 
 # extracting relevant columns
 temp = csv_file['Temperature_C']
@@ -35,4 +35,5 @@ for i in range(4):
 
 fig.tight_layout()
 fig.subplots_adjust(hspace=0.35, wspace=0.25)
+
 plt.show()
